@@ -1,53 +1,25 @@
 <template>
-  <section class="section">
-    <div class="columns is-mobile">
-      <card
-        title="Free"
-        icon="github-circle"
-      >
-        Open source on <a href="https://github.com/buefy/buefy">
-          GitHub
-        </a>
-      </card>
-
-      <card
-        title="Responsive"
-        icon="cellphone-link"
-      >
-        <b class="has-text-grey">
-          Every
-        </b> component is responsive
-      </card>
-
-      <card
-        title="Modern"
-        icon="alert-decagram"
-      >
-        Built with <a href="https://vuejs.org/">
-          Vue.js
-        </a> and <a href="http://bulma.io/">
-          Bulma
-        </a>
-      </card>
-
-      <card
-        title="Lightweight"
-        icon="arrange-bring-to-front"
-      >
-        No other internal dependency
-      </card>
-    </div>
-  </section>
+  <div>
+    <section class="section" v-for="section in history">
+      <h2 class="title is-2">{{section.name}}</h2>
+      <div v-for="pkg in section.packages">
+        <h3 class="title is-3">{{pkg.name}} - {{pkg.path}}</h3>
+        <h4 class="title is-4">Versions</h4>
+        <p v-for="version in pkg.versions">{{version}}</p>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
-import Card from '~/components/Card'
+const history = require("~/history/output.json");
 
 export default {
-  name: 'HomePage',
-
-  components: {
-    Card
+  name: "HomePage",
+  data() {
+    return {
+      history: history
+    };
   }
-}
+};
 </script>
