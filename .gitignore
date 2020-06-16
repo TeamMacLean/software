@@ -1,6 +1,10 @@
 #custom
 tsl/
-history/
+# exclude everything
+history/*
+
+# exception to the rule
+!history/.gitkeep 
 
 # Created by .ignore support plugin (hsz.mobi)
 ### Node template
