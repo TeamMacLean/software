@@ -6,6 +6,7 @@
         <h3 class="title is-3">{{pkg.name}} - {{pkg.path}}</h3>
         <h4 class="title is-4">Versions</h4>
         <p v-for="version in pkg.versions">{{version}}</p>
+        <hr />
       </div>
     </section>
   </div>
