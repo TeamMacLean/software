@@ -10,7 +10,6 @@
         <h3 class="title is-3"></h3>
         <h4 class="title is-4">Versions</h4>
         <p v-for="version in pkg.versions">{{version}}</p> -->
-        <hr />
       </ul>
     </section>
   </div>
