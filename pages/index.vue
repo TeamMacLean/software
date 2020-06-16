@@ -4,7 +4,7 @@
       <h2 class="title is-2">{{section.name}}</h2>
       <ul v-for="pkg in section.packages">
         <li>
-          <a>{{pkg.name}} - {{pkg.path}}</a>
+          <a>{{pkg.name}}</a>
         </li>
         <!-- 
 
