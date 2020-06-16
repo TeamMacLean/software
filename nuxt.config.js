@@ -1,3 +1,4 @@
+require('dotenv').config(); //TO USE CORRECT PORT
 
 module.exports = {
   mode: 'universal',
